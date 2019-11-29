@@ -36,8 +36,8 @@ after('cleanup', 'restart');
 task('yarn', '
     source /home/nuxt/.bashrc;
     yarn;
-    yarn build;
-    NODE_ENV=production yarn start;
+    NODE_ENV=production yarn build;
+    yarn start;
 ');
 
 task('restart', '
