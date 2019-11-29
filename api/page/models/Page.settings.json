@@ -1,12 +1,15 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "page",
   "info": {
     "name": "page",
-    "description": ""
+    "description": "Webseiten"
   },
   "options": {
-    "timestamps": true
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
   },
   "attributes": {
     "Titel": {
@@ -14,6 +17,10 @@
     },
     "Content": {
       "type": "text"
+    },
+    "permission": {
+      "model": "permission",
+      "plugin": "users-permissions"
     }
   }
 }

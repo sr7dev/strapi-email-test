@@ -521,6 +521,38 @@
           },
           "Content": {
             "type": "string"
+          },
+          "permission": {
+            "required": [
+              "id",
+              "type",
+              "controller",
+              "action",
+              "enabled"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "controller": {
+                "type": "string"
+              },
+              "action": {
+                "type": "string"
+              },
+              "enabled": {
+                "type": "boolean"
+              },
+              "policy": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -530,6 +562,9 @@
             "type": "string"
           },
           "Content": {
+            "type": "string"
+          },
+          "permission": {
             "type": "string"
           }
         }

@@ -2,19 +2,19 @@
   "openapi": "3.0.0",
   "info": {
     "version": "1.0.0",
-    "title": "DOCUMENTATION",
+    "title": "Docs",
     "description": "",
     "termsOfService": "YOUR_TERMS_OF_SERVICE_URL",
     "contact": {
-      "name": "TEAM",
-      "email": "contact-email@something.io",
+      "name": "CROSS Solution",
+      "email": "bleek@cross-solution.de",
       "url": "mywebsite.io"
     },
     "license": {
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "11/29/2019 1:16:42 PM"
+    "x-generation-date": "11/29/2019 6:44:24 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -22,7 +22,7 @@
   },
   "servers": [
     {
-      "url": "http://localhost:1337",
+      "url": "http://10.10.1.28:1337",
       "description": "Development server"
     },
     {
@@ -2702,6 +2702,38 @@
           },
           "Content": {
             "type": "string"
+          },
+          "permission": {
+            "required": [
+              "id",
+              "type",
+              "controller",
+              "action",
+              "enabled"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "controller": {
+                "type": "string"
+              },
+              "action": {
+                "type": "string"
+              },
+              "enabled": {
+                "type": "boolean"
+              },
+              "policy": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -2711,6 +2743,9 @@
             "type": "string"
           },
           "Content": {
+            "type": "string"
+          },
+          "permission": {
             "type": "string"
           }
         }
