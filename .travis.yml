@@ -26,9 +26,9 @@ before_install:
 - chmod +x deployer.phar
 install:
 - yarn
-- node_modules/.bin/quasar build -m ssr
+- NODE_ENV=production yarn build
 script:
-- node_modules/.bin/quasar test --unit jest
+- echo "TODO create tests"
 deploy:
 - provider: script
   skip_cleanup: true
