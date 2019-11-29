@@ -36,7 +36,7 @@ after('cleanup', 'restart');
 task('yarn', '
     ~/.yarn/bin/yarn;
     ~/.yarn/bin/yarn build;
-    ~/.yarn/bin/yarn start;
+    NODE_ENV=production ~/.yarn/bin/yarn start;
 ');
 
 task('restart', '
