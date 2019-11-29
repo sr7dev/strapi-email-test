@@ -36,7 +36,7 @@ after('cleanup', 'restart');
 task('yarn', '
     /home/nuxt/.yarn/bin/yarn;
     NODE_ENV=production /home/nuxt/.yarn/bin/yarn build;
-    /home/nuxt/.yarn/bin/yarn start;
+    NODE_ENV=production /home/nuxt/.yarn/bin/yarn start;
 ');
 
 task('restart', '
