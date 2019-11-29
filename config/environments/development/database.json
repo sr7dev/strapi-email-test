@@ -1,0 +1,19 @@
+{
+  "defaultConnection": "default",
+  "connections": {
+    "default": {
+      "connector": "strapi-hook-mongoose",
+      "settings": {
+        "database": "strapi-cross",
+        "host": "mongo1.hq.cross",
+        "srv": false,
+        "port": 27017,
+        "username": "",
+        "password": ""
+      },
+      "options": {
+        "authenticationDatabase": ""
+      }
+    }
+  }
+}
