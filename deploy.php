@@ -34,10 +34,9 @@ after('deploy:symlink', 'yarn');
 after('cleanup', 'restart');
 
 task('yarn', '
-    source /home/nuxt/.bashrc;
-    yarn;
-    NODE_ENV=production yarn build;
-    yarn start;
+    /home/nuxt/.yarn/bin/yarn;
+    NODE_ENV=production /home/nuxt/.yarn/bin/yarn build;
+    /home/nuxt/.yarn/bin/yarn start;
 ');
 
 task('restart', '
