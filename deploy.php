@@ -35,6 +35,7 @@ after('cleanup', 'restart');
 
 task('yarn', '
     ~/.yarn/bin/yarn;
+    ~/.yarn/bin/yarn build;
     ~/.yarn/bin/yarn start;
 ');
 
