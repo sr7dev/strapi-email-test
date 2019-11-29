@@ -35,9 +35,9 @@ after('cleanup', 'restart');
 
 task('yarn', '
     ~/.yarn/bin/yarn;
-    node_modules/.bin/quasar build -m ssr;
+    ~/.yarn/bin/yarn start;
 ');
 
 task('restart', '
-    sudo systemctl restart nodeserver-quasar.service;
+    sudo systemctl restart nodeserver-cms.service;
 ');
