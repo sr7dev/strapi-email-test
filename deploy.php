@@ -34,9 +34,9 @@ after('deploy:symlink', 'yarn');
 after('cleanup', 'restart');
 
 task('yarn', '
-    ~/.yarn/bin/yarn;
-    ~/.yarn/bin/yarn build;
-    NODE_ENV=production ~/.yarn/bin/yarn start;
+    yarn;
+    yarn build;
+    NODE_ENV=production yarn start;
 ');
 
 task('restart', '
