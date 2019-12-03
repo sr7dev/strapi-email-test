@@ -4,12 +4,12 @@
     "default": {
       "connector": "strapi-hook-mongoose",
       "settings": {
-        "database": "strapi-cross",
-        "host": "mongo1.hq.cross",
-        "srv": false,
-        "port": 27017,
-        "username": "",
-        "password": ""
+        "host": "${process.env.DATABASE_HOST || '127.0.0.1'}",
+        "port": "${process.env.DATABASE_PORT || 27017}",
+        "database": "${process.env.DATABASE_NAME || 'strapi-cross'}",
+        "username": "${process.env.DATABASE_USERNAME || ''}",
+        "password": "${process.env.DATABASE_PASSWORD || ''}",
+        "srv": false
       },
       "options": {
         "authenticationDatabase": ""
