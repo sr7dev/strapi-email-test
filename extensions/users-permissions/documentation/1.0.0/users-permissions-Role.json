@@ -602,6 +602,9 @@
                 },
                 "role": {
                   "type": "string"
+                },
+                "photo": {
+                  "type": "string"
                 }
               }
             }

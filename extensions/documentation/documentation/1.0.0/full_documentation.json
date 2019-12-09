@@ -3,18 +3,18 @@
   "info": {
     "version": "1.0.0",
     "title": "Docs",
-    "description": "",
+    "description": "API of cross-solution.de",
     "termsOfService": "YOUR_TERMS_OF_SERVICE_URL",
     "contact": {
       "name": "CROSS Solution",
       "email": "bleek@cross-solution.de",
-      "url": "mywebsite.io"
+      "url": "cross-solution.de"
     },
     "license": {
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "12/09/2019 11:44:55 AM"
+    "x-generation-date": "12/09/2019 4:10:26 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -30,7 +30,7 @@
       "description": "Staging server"
     },
     {
-      "url": "YOUR_PRODUCTION_SERVER",
+      "url": "https://strapi.cross-solution.de:8443",
       "description": "Production server"
     }
   ],
@@ -3738,6 +3738,9 @@
               },
               "description": {
                 "type": "string"
+              },
+              "photo": {
+                "type": "string"
               }
             }
           },
@@ -3771,6 +3774,9 @@
                 },
                 "description": {
                   "type": "string"
+                },
+                "photo": {
+                  "type": "string"
                 }
               }
             }
@@ -3784,6 +3790,52 @@
           },
           "description": {
             "type": "string"
+          },
+          "photo": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -4041,6 +4093,9 @@
                 },
                 "role": {
                   "type": "string"
+                },
+                "photo": {
+                  "type": "string"
                 }
               }
             }
@@ -4134,6 +4189,52 @@
                 "items": {
                   "type": "string"
                 }
+              }
+            }
+          },
+          "photo": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
               }
             }
           }
