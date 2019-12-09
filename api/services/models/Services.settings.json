@@ -1,0 +1,33 @@
+{
+  "connection": "default",
+  "collectionName": "services",
+  "info": {
+    "name": "services",
+    "description": "Customer Services provides by CROSS Solution"
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "icons": {
+      "group": "service_icons",
+      "type": "group",
+      "repeatable": true
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "info": {
+    "name": "serviceIcons",
+    "description": "Icons fpr Customer Services"
+  },
+  "connection": "default",
+  "collectionName": "groups_service_icons",
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "tooltip": {
+      "type": "string"
+    }
+  }
+}
