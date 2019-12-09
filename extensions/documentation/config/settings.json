@@ -3,12 +3,12 @@
   "info": {
     "version": "1.0.0",
     "title": "Docs",
-    "description": "",
+    "description": "API of cross-solution.de",
     "termsOfService": "YOUR_TERMS_OF_SERVICE_URL",
     "contact": {
       "name": "CROSS Solution",
       "email": "bleek@cross-solution.de",
-      "url": "mywebsite.io"
+      "url": "cross-solution.de"
     },
     "license": {
       "name": "Apache 2.0",
@@ -29,7 +29,7 @@
       "description": "Staging server"
     },
     {
-      "url": "YOUR_PRODUCTION_SERVER",
+      "url": "https://strapi.cross-solution.de:8443",
       "description": "Production server"
     }
   ],
