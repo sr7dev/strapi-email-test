@@ -32,6 +32,6 @@ script:
 deploy:
 - provider: script
   skip_cleanup: true
-  script: "./deployer.phar -vvv deploy"
+  script: "./deployer.phar deploy"
   on:
     branch: master
