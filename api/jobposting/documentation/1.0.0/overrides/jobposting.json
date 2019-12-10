@@ -1,0 +1,20 @@
+{
+  "paths": {
+    "/jobpostings": {
+      "get": {
+        "description": "gets a list of job postings",
+        "summary": "",
+        "tags": [
+          "Jobposting"
+        ]
+      },
+      "post": {
+        "description": "creates a new job posting",
+        "summary": "",
+        "tags": [
+          "Jobposting"
+        ]
+      }
+    }
+  }
+}

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "12/10/2019 5:15:30 PM"
+    "x-generation-date": "12/10/2019 5:33:15 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -1562,7 +1562,7 @@
     "/jobpostings": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "gets a list of job postings",
         "responses": {
           "200": {
             "description": "response",
@@ -1747,7 +1747,7 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "creates a new job posting",
         "responses": {
           "200": {
             "description": "response",
