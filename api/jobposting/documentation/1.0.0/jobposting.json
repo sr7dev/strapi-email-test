@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/categories": {
+    "/jobpostings": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Category"
+                    "$ref": "#/components/schemas/Jobposting"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Jobposting"
         ],
         "parameters": [
           {
@@ -195,7 +195,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Category"
+                  "$ref": "#/components/schemas/Jobposting"
                 }
               }
             }
@@ -233,7 +233,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Jobposting"
         ],
         "requestBody": {
           "description": "",
@@ -241,14 +241,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCategory"
+                "$ref": "#/components/schemas/NewJobposting"
               }
             }
           }
         }
       }
     },
-    "/categories/count": {
+    "/jobpostings/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -300,12 +300,12 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Jobposting"
         ],
         "parameters": []
       }
     },
-    "/categories/{id}": {
+    "/jobpostings/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -315,7 +315,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Category"
+                  "$ref": "#/components/schemas/Jobposting"
                 }
               }
             }
@@ -353,7 +353,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Jobposting"
         ],
         "parameters": [
           {
@@ -377,7 +377,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Category"
+                  "$ref": "#/components/schemas/Jobposting"
                 }
               }
             }
@@ -415,7 +415,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Jobposting"
         ],
         "requestBody": {
           "description": "",
@@ -423,7 +423,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCategory"
+                "$ref": "#/components/schemas/NewJobposting"
               }
             }
           }
@@ -489,7 +489,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Jobposting"
         ],
         "parameters": [
           {
@@ -508,7 +508,7 @@
   },
   "components": {
     "schemas": {
-      "Category": {
+      "Jobposting": {
         "required": [
           "id"
         ],
@@ -516,109 +516,45 @@
           "id": {
             "type": "string"
           },
-          "Name": {
+          "title": {
             "type": "string"
-          },
-          "parent": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "Name": {
-                "type": "string"
-              },
-              "parent": {
-                "type": "string"
-              },
-              "childs": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "order": {
-                "type": "integer"
-              },
-              "active": {
-                "type": "boolean"
-              },
-              "description": {
-                "type": "string"
-              }
-            }
-          },
-          "childs": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "Name": {
-                  "type": "string"
-                },
-                "parent": {
-                  "type": "string"
-                },
-                "childs": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "order": {
-                  "type": "integer"
-                },
-                "active": {
-                  "type": "boolean"
-                },
-                "description": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "order": {
-            "type": "integer"
-          },
-          "active": {
-            "type": "boolean",
-            "default": true
           },
           "description": {
             "type": "string"
+          },
+          "datePublishStart": {
+            "type": "string"
+          },
+          "datePublishEnd": {
+            "type": "string"
+          },
+          "geo": {
+            "type": "object"
+          },
+          "fields": {
+            "type": "object"
           }
         }
       },
-      "NewCategory": {
+      "NewJobposting": {
         "properties": {
-          "Name": {
+          "title": {
             "type": "string"
-          },
-          "parent": {
-            "type": "string"
-          },
-          "childs": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "order": {
-            "type": "integer"
-          },
-          "active": {
-            "type": "boolean",
-            "default": true
           },
           "description": {
             "type": "string"
+          },
+          "datePublishStart": {
+            "type": "string"
+          },
+          "datePublishEnd": {
+            "type": "string"
+          },
+          "geo": {
+            "type": "object"
+          },
+          "fields": {
+            "type": "object"
           }
         }
       }
@@ -626,7 +562,7 @@
   },
   "tags": [
     {
-      "name": "Category"
+      "name": "Jobposting"
     }
   ]
 }

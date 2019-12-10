@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/categories": {
+    "/applications": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Category"
+                    "$ref": "#/components/schemas/Application"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Application"
         ],
         "parameters": [
           {
@@ -195,7 +195,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Category"
+                  "$ref": "#/components/schemas/Application"
                 }
               }
             }
@@ -233,7 +233,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Application"
         ],
         "requestBody": {
           "description": "",
@@ -241,14 +241,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCategory"
+                "$ref": "#/components/schemas/NewApplication"
               }
             }
           }
         }
       }
     },
-    "/categories/count": {
+    "/applications/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -300,12 +300,12 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Application"
         ],
         "parameters": []
       }
     },
-    "/categories/{id}": {
+    "/applications/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -315,7 +315,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Category"
+                  "$ref": "#/components/schemas/Application"
                 }
               }
             }
@@ -353,7 +353,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Application"
         ],
         "parameters": [
           {
@@ -377,7 +377,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Category"
+                  "$ref": "#/components/schemas/Application"
                 }
               }
             }
@@ -415,7 +415,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Application"
         ],
         "requestBody": {
           "description": "",
@@ -423,7 +423,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCategory"
+                "$ref": "#/components/schemas/NewApplication"
               }
             }
           }
@@ -489,7 +489,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Application"
         ],
         "parameters": [
           {
@@ -508,7 +508,7 @@
   },
   "components": {
     "schemas": {
-      "Category": {
+      "Application": {
         "required": [
           "id"
         ],
@@ -516,10 +516,62 @@
           "id": {
             "type": "string"
           },
-          "Name": {
+          "coverLetter": {
             "type": "string"
           },
-          "parent": {
+          "attachments": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "hash",
+                "mime",
+                "size",
+                "url",
+                "provider"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "hash": {
+                  "type": "string"
+                },
+                "sha256": {
+                  "type": "string"
+                },
+                "ext": {
+                  "type": "string"
+                },
+                "mime": {
+                  "type": "string"
+                },
+                "size": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "provider_metadata": {
+                  "type": "object"
+                },
+                "related": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "jobReference": {
+            "type": "string"
+          },
+          "address": {
             "required": [
               "id"
             ],
@@ -527,97 +579,49 @@
               "id": {
                 "type": "string"
               },
-              "Name": {
+              "firstname": {
                 "type": "string"
               },
-              "parent": {
+              "lastname": {
                 "type": "string"
               },
-              "childs": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "order": {
-                "type": "integer"
-              },
-              "active": {
-                "type": "boolean"
-              },
-              "description": {
+              "street": {
                 "type": "string"
+              },
+              "housnumber": {
+                "type": "string"
+              },
+              "postalCode": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "country": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "geo": {
+                "type": "object"
               }
             }
-          },
-          "childs": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "Name": {
-                  "type": "string"
-                },
-                "parent": {
-                  "type": "string"
-                },
-                "childs": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "order": {
-                  "type": "integer"
-                },
-                "active": {
-                  "type": "boolean"
-                },
-                "description": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "order": {
-            "type": "integer"
-          },
-          "active": {
-            "type": "boolean",
-            "default": true
-          },
-          "description": {
-            "type": "string"
           }
         }
       },
-      "NewCategory": {
+      "NewApplication": {
         "properties": {
-          "Name": {
+          "coverLetter": {
             "type": "string"
           },
-          "parent": {
+          "jobReference": {
             "type": "string"
           },
-          "childs": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "order": {
-            "type": "integer"
-          },
-          "active": {
-            "type": "boolean",
-            "default": true
-          },
-          "description": {
+          "address": {
             "type": "string"
           }
         }
@@ -626,7 +630,7 @@
   },
   "tags": [
     {
-      "name": "Category"
+      "name": "Application"
     }
   ]
 }

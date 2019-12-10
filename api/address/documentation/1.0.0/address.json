@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/categories": {
+    "/addresses": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Category"
+                    "$ref": "#/components/schemas/Address"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Address"
         ],
         "parameters": [
           {
@@ -195,7 +195,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Category"
+                  "$ref": "#/components/schemas/Address"
                 }
               }
             }
@@ -233,7 +233,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Address"
         ],
         "requestBody": {
           "description": "",
@@ -241,14 +241,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCategory"
+                "$ref": "#/components/schemas/NewAddress"
               }
             }
           }
         }
       }
     },
-    "/categories/count": {
+    "/addresses/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -300,12 +300,12 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Address"
         ],
         "parameters": []
       }
     },
-    "/categories/{id}": {
+    "/addresses/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -315,7 +315,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Category"
+                  "$ref": "#/components/schemas/Address"
                 }
               }
             }
@@ -353,7 +353,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Address"
         ],
         "parameters": [
           {
@@ -377,7 +377,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Category"
+                  "$ref": "#/components/schemas/Address"
                 }
               }
             }
@@ -415,7 +415,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Address"
         ],
         "requestBody": {
           "description": "",
@@ -423,7 +423,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCategory"
+                "$ref": "#/components/schemas/NewAddress"
               }
             }
           }
@@ -489,7 +489,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Address"
         ],
         "parameters": [
           {
@@ -508,7 +508,7 @@
   },
   "components": {
     "schemas": {
-      "Category": {
+      "Address": {
         "required": [
           "id"
         ],
@@ -516,109 +516,69 @@
           "id": {
             "type": "string"
           },
-          "Name": {
+          "firstname": {
             "type": "string"
           },
-          "parent": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "Name": {
-                "type": "string"
-              },
-              "parent": {
-                "type": "string"
-              },
-              "childs": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "order": {
-                "type": "integer"
-              },
-              "active": {
-                "type": "boolean"
-              },
-              "description": {
-                "type": "string"
-              }
-            }
-          },
-          "childs": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "Name": {
-                  "type": "string"
-                },
-                "parent": {
-                  "type": "string"
-                },
-                "childs": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "order": {
-                  "type": "integer"
-                },
-                "active": {
-                  "type": "boolean"
-                },
-                "description": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "order": {
-            "type": "integer"
-          },
-          "active": {
-            "type": "boolean",
-            "default": true
-          },
-          "description": {
+          "lastname": {
             "type": "string"
+          },
+          "street": {
+            "type": "string"
+          },
+          "housnumber": {
+            "type": "string"
+          },
+          "postalCode": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "geo": {
+            "type": "object"
           }
         }
       },
-      "NewCategory": {
+      "NewAddress": {
         "properties": {
-          "Name": {
+          "firstname": {
             "type": "string"
           },
-          "parent": {
+          "lastname": {
             "type": "string"
           },
-          "childs": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "order": {
-            "type": "integer"
-          },
-          "active": {
-            "type": "boolean",
-            "default": true
-          },
-          "description": {
+          "street": {
             "type": "string"
+          },
+          "housnumber": {
+            "type": "string"
+          },
+          "postalCode": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "geo": {
+            "type": "object"
           }
         }
       }
@@ -626,7 +586,7 @@
   },
   "tags": [
     {
-      "name": "Category"
+      "name": "Address"
     }
   ]
 }

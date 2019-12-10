@@ -1,0 +1,34 @@
+{
+  "connection": "default",
+  "collectionName": "jobposting",
+  "info": {
+    "name": "jobposting",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "datePublishStart": {
+      "type": "date"
+    },
+    "datePublishEnd": {
+      "type": "date"
+    },
+    "geo": {
+      "type": "json"
+    },
+    "fields": {
+      "type": "json"
+    }
+  }
+}

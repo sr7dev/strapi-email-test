@@ -1,0 +1,27 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "application",
+    "description": "Application for a job posting"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "coverLetter": {
+      "type": "text"
+    },
+    "attachments": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "jobReference": {
+      "type": "string"
+    },
+    "address": {
+      "model": "address"
+    }
+  }
+}

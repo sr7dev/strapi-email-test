@@ -1,0 +1,46 @@
+{
+  "connection": "default",
+  "collectionName": "address",
+  "info": {
+    "name": "address",
+    "description": "Address"
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "firstname": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "street": {
+      "type": "string"
+    },
+    "housnumber": {
+      "type": "string"
+    },
+    "postalCode": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "geo": {
+      "type": "json"
+    }
+  }
+}
