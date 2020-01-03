@@ -8,8 +8,7 @@ set('application', 'cross-cms');
 
 // Shared files/dirs between deploys 
 add('shared_files', [
-    '.env',
-    'production.html'
+    '.env'
 ]);
 
 add('shared_dirs', [
@@ -41,6 +40,7 @@ after('cleanup', 'restart');
 task('yarn', '
     /home/nuxt/.yarn/bin/yarn;
     NODE_ENV=production /home/nuxt/.yarn/bin/yarn build;
+    touch production.html;
 ');
 
 task('restart', '
