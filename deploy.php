@@ -8,7 +8,8 @@ set('application', 'cross-cms');
 
 // Shared files/dirs between deploys 
 add('shared_files', [
-    '.env'
+    '.env',
+    'production.html'
 ]);
 
 add('shared_dirs', [
