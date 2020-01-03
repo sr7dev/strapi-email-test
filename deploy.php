@@ -40,7 +40,7 @@ after('cleanup', 'restart');
 task('yarn', '
     /home/nuxt/.yarn/bin/yarn;
     NODE_ENV=production /home/nuxt/.yarn/bin/yarn build;
-    touch production.html;
+    touch public/production.html;
 ');
 
 task('restart', '
