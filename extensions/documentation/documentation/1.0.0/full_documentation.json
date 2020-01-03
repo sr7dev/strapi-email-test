@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "12/10/2019 5:33:15 PM"
+    "x-generation-date": "01/03/2020 4:03:19 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -214,7 +214,10 @@
             "required": false,
             "description": "Get records that matches any value in the array of values",
             "schema": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "deprecated": false
           },
@@ -224,7 +227,10 @@
             "required": false,
             "description": "Get records that doesn't match any value in the array of values",
             "schema": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "deprecated": false
           }
@@ -719,7 +725,10 @@
             "required": false,
             "description": "Get records that matches any value in the array of values",
             "schema": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "deprecated": false
           },
@@ -729,7 +738,10 @@
             "required": false,
             "description": "Get records that doesn't match any value in the array of values",
             "schema": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "deprecated": false
           }
@@ -1224,7 +1236,10 @@
             "required": false,
             "description": "Get records that matches any value in the array of values",
             "schema": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "deprecated": false
           },
@@ -1234,7 +1249,10 @@
             "required": false,
             "description": "Get records that doesn't match any value in the array of values",
             "schema": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "deprecated": false
           }
@@ -1729,7 +1747,10 @@
             "required": false,
             "description": "Get records that matches any value in the array of values",
             "schema": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "deprecated": false
           },
@@ -1739,7 +1760,10 @@
             "required": false,
             "description": "Get records that doesn't match any value in the array of values",
             "schema": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "deprecated": false
           }
@@ -2234,7 +2258,10 @@
             "required": false,
             "description": "Get records that matches any value in the array of values",
             "schema": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "deprecated": false
           },
@@ -2244,7 +2271,10 @@
             "required": false,
             "description": "Get records that doesn't match any value in the array of values",
             "schema": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "deprecated": false
           }
@@ -2739,7 +2769,10 @@
             "required": false,
             "description": "Get records that matches any value in the array of values",
             "schema": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "deprecated": false
           },
@@ -2749,7 +2782,10 @@
             "required": false,
             "description": "Get records that doesn't match any value in the array of values",
             "schema": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "deprecated": false
           }
@@ -3823,7 +3859,10 @@
             "required": false,
             "description": "Get records that matches any value in the array of values",
             "schema": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "deprecated": false
           },
@@ -3833,7 +3872,10 @@
             "required": false,
             "description": "Get records that doesn't match any value in the array of values",
             "schema": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "deprecated": false
           }
@@ -4222,7 +4264,10 @@
             "required": false,
             "description": "Get records that matches any value in the array of values",
             "schema": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "deprecated": false
           },
@@ -4232,7 +4277,10 @@
             "required": false,
             "description": "Get records that doesn't match any value in the array of values",
             "schema": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "deprecated": false
           }
@@ -4938,7 +4986,10 @@
             "required": false,
             "description": "Get records that matches any value in the array of values",
             "schema": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "deprecated": false
           },
@@ -4948,7 +4999,10 @@
             "required": false,
             "description": "Get records that doesn't match any value in the array of values",
             "schema": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "deprecated": false
           }
@@ -5331,7 +5385,7 @@
                   "type": "string"
                 },
                 "size": {
-                  "type": "string"
+                  "type": "number"
                 },
                 "url": {
                   "type": "string"
@@ -5650,26 +5704,6 @@
           },
           "description": {
             "type": "string"
-          },
-          "icons": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "tooltip": {
-                  "type": "string"
-                }
-              }
-            }
           }
         }
       },
@@ -5686,26 +5720,6 @@
           },
           "description": {
             "type": "string"
-          },
-          "icons": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "tooltip": {
-                  "type": "string"
-                }
-              }
-            }
           }
         }
       },
@@ -5927,7 +5941,7 @@
                 "type": "string"
               },
               "size": {
-                "type": "string"
+                "type": "number"
               },
               "url": {
                 "type": "string"

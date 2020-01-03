@@ -23,11 +23,6 @@
     },
     "description": {
       "type": "string"
-    },
-    "icons": {
-      "group": "service_icons",
-      "type": "group",
-      "repeatable": true
     }
   }
 }
