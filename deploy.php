@@ -11,6 +11,10 @@ add('shared_files', [
     '.env'
 ]);
 
+add('shared_dirs', [
+    'public/uploads'
+]);
+
 // Project repository
 set('repository', 'https://github.com/cross-solution/cms.git');
 
